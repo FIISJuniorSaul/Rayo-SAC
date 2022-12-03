@@ -69,7 +69,7 @@
                                                         <div class="col-md-6">
                                                             <label class="small mb-1" for="inputCode">{{ __('Code') }}</label>
                                                             <input class="form-control" name="codigo" id="codigo"
-                                                                type="text" placeholder="" />
+                                                                type="text" placeholder="****" />
                                                         </div>
                                                         <!-- Form Group (DNI)-->
                                                         <div class="col-md-6">

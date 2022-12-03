@@ -193,7 +193,8 @@
   "Code":"Código",
   "Names":"Nombres",
   "DNI number":"Nº de DNI",
-  "Natural customer details":"Detalles del cliente Natural"
+  "Natural customer details":"Detalles del cliente Natural",
+  "select client":"Seleccionar cliente"
 
 
 }

@@ -57,7 +57,7 @@
                                         <div class="col-md-6">
                                             <label class="small mb-1" for="inputDetailsBurden">{{ __('Weight of the load') }}</label>
                                             <input class="form-control" id="inputDetailsBurden"
-                                                type="number" placeholder="***T" name="peso"
+                                                type="number" placeholder="***Toneladas" name="peso"
                                                 value="" />
                                         </div>
 
@@ -73,8 +73,8 @@
                                         </div>
                                         <div class="col-md-6">
                                             <br>
-                                            <h6 class="small mb-1" for="inputRol">{{ __('Select vehicle') }}</h6>
-                                            <select id="cliente_id" name="cliente_id" class="form-control" style="color: #050505;">
+                                            <h6 class="small mb-1" for="inputRol">{{ __('select client') }}</h6>
+                                            <select id="cliente_id" name="cliente_id" class="form-control" style="color: #C1BEBE;">
                                                 <option>{{ __('Select') }}</option>
                                                 @foreach($cliente as $cli)
                                                 <option  style="color: #050505;" value="{{ $cli->id }}" >{{ $cli->persona->nombre}} </option>

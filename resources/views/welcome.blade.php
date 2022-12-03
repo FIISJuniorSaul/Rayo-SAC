@@ -17,7 +17,7 @@
                 <div class="">
                     <li class="imglogo">
                         <img src="../image/logo.png" alt="" height="30" width="30">
-                        <a style="color:#FFFFFF;">RAYO SAC</a>
+                        <a style="color:#FFFFFF;">RAYO S.A.C</a>
                     </li>
                 </div>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
