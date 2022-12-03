@@ -39,10 +39,9 @@ class ClienteNaturalController extends Controller
             $natural->id = $persona->id;
             $natural->codigo = $request->codigo;
             $natural->save();
-
             DB::commit();
-            return redirect()->route('clientes.indexClienteNatural')->with('success', 'El usuario ha sido actualizado correctamente.');
-        } catch (Exception $e) {
+            return redirect()->route('clienteNatural.index')->with('success', 'El usuario ha sido creado correctamente.');
+        } catch (\Exception $e) {
             DB::rollBack();
         }
     }

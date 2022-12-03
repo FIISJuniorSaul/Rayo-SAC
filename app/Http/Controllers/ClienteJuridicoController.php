@@ -51,8 +51,8 @@ class ClienteJuridicoController extends Controller
             $juridico->save();
 
             DB::commit();
-            return view('clientes.index');
-        } catch (Exception $e) {
+            return redirect()->route('clienteJuridico.index')->with('success', 'El usuario ha sido creado correctamente.');
+        } catch (\Exception $e) {
             DB::rollBack();
         }
     }
@@ -72,7 +72,7 @@ class ClienteJuridicoController extends Controller
             $clientesju = ClienteJuridico::findOrfail($id);
             $clientesju->fill($request->all());
             $clientesju->save();
-            return redirect()->route('clientes.index')->with('success', 'Cliente jurídico actualizado correctamente.');
+            return redirect()->route('cliente.index')->with('success', 'Cliente jurídico actualizado correctamente.');
         } catch (\Exception $ex) {
             return back()->with('warning', 'ocurrio un error j');
         }
@@ -82,6 +82,6 @@ class ClienteJuridicoController extends Controller
     {
         $clientesju = ClienteJuridico::findOrFail($id);
         $clientesju->delete();
-        return redirect()->route('clientes.index')->with('success', 'Cliente jurídico  eliminado correctamente.');
+        return redirect()->route('cliente.index')->with('success', 'Cliente jurídico  eliminado correctamente.');
     }
 }

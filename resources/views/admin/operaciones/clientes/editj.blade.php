@@ -31,15 +31,16 @@
                             <!-- Main page content-->
                             <div class="container-xl px-4 mt-4">
                                 <hr class="mt-0 mb-4" />
-                                <div class="row">
-                                    <div class="#">
-                                        @if (\Session::has('warning'))
+                                @if (\Session::has('warning'))
                                                     <div class="alert alert-danger">
                                                         <ul>
                                                             <li>{{ \Session::get('warning') }}</li>
                                                         </ul>
                                                     </div>
                                                 @endif
+                                <div class="row">
+                                    <div class="#">
+
                                         <!-- Account details card-->
                                         <div class="card mb-4">
                                             <div class="card-header">{{ __('Legal client details') }}</div>
