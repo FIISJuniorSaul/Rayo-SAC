@@ -212,9 +212,9 @@
                                                         </div>
                                                         <div class="text-center">
                                                             <br>
-                                                            <button class="btn btn-primary me-md-2" type="submit" onclick="return confirm('estas  apunto de registrar un vehiculo');"><em class='bx bx-check'></em>{{ __('Save') }}</button>
+                                                            <button class="btn btn-primary me-md-2" type="submit" onclick="return confirm('Estas  apunto de registrar el cliente jurídico');"><em class='bx bx-check'></em>{{ __('Save') }}</button>
                                                             <form action="{{route('clienteJuridico.index')}}" method="POST">
-                                                                <a class="btn btn-primary me-md-2" href="{{route('clienteJuridico.index')}}" onclick="return confirm('seguro que desea cancelar?');"><em class='bx bxs-left-arrow-square'></em> {{ __('Cancel') }}</a>
+                                                                <a class="btn btn-primary me-md-2" href="{{route('clienteJuridico.index')}}" onclick="return confirm('Seguro que desea cancelar?');"><em class='bx bxs-left-arrow-square'></em> {{ __('Cancel') }}</a>
                                                                 @csrf
                                                             </form>
                                                         </div>

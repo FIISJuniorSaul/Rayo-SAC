@@ -69,7 +69,7 @@
                                                         <div class="col-md-6">
                                                             <label class="small mb-1" for="inputCode">{{ __('Code') }}</label>
                                                             <input class="form-control" name="codigo" id="codigo"
-                                                                type="text" placeholder="****" />
+                                                                type="number"  min="1" max="9999" placeholder="****"  />
                                                         </div>
                                                         <!-- Form Group (DNI)-->
                                                         <div class="col-md-6">
@@ -116,9 +116,9 @@
                                                     <!--estado roles y permisos-->
                                                     <div class="text-center">
                                                         <br>
-                                                        <button class="btn btn-primary me-md-2" type="submit" onclick="return confirm('estas  apunto de registrar un vehiculo');"><em class='bx bx-check'></em>{{ __('Save') }}</button>
+                                                        <button class="btn btn-primary me-md-2" type="submit" onclick="return confirm('Estás  apunto de registrar un cliente natural');"><em class='bx bx-check'></em>{{ __('Save') }}</button>
                                                         <form action="{{route('clienteNatural.index')}}" method="POST">
-                                                            <a class="btn btn-primary me-md-2" href="{{route('clienteNatural.index')}}" onclick="return confirm('seguro que desea cancelar?');"><em class='bx bxs-left-arrow-square'></em> {{ __('Cancel') }}</a>
+                                                            <a class="btn btn-primary me-md-2" href="{{route('clienteNatural.index')}}" onclick="return confirm('Seguro que desea cancelar?');"><em class='bx bxs-left-arrow-square'></em> {{ __('Cancel') }}</a>
                                                             @csrf
                                                         </form>
                                                     </div>

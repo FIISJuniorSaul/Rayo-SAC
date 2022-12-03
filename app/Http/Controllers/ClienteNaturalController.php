@@ -18,7 +18,8 @@ class ClienteNaturalController extends Controller
     }
     public function create()
     {
-        return view('admin.operaciones.clientes.crearPersonaNatural');
+
+        return view('admin.operaciones.clientes.indexClienteNatural');
     }
 
     public function store(Request $request)
