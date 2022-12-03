@@ -51,6 +51,7 @@ class ClienteJuridicoController extends Controller
             $juridico->save();
 
             DB::commit();
+            return view('clientes.index');
         } catch (Exception $e) {
             DB::rollBack();
         }

@@ -19,7 +19,7 @@ class ClienteNaturalController extends Controller
     public function create()
     {
 
-        return view('admin.operaciones.clientes.indexClienteNatural');
+        return view('admin.operaciones.clientes.crearPersonaNatural');
     }
 
     public function store(Request $request)
@@ -41,6 +41,7 @@ class ClienteNaturalController extends Controller
             $natural->save();
 
             DB::commit();
+            return redirect()->route('clientes.indexClienteNatural')->with('success', 'El usuario ha sido actualizado correctamente.');
         } catch (Exception $e) {
             DB::rollBack();
         }

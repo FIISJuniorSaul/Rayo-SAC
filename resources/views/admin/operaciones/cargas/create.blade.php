@@ -73,11 +73,11 @@
                                         </div>
                                         <div class="col-md-6">
                                             <br>
-                                            <h6 class="small mb-1" for="inputRol">{{ __('select client') }}</h6>
+                                            <h6 class="small mb-1" for="inputRol">{{ __('Select natural client') }}</h6>
                                             <select id="cliente_id" name="cliente_id" class="form-control" style="color: #C1BEBE;">
-                                                <option>{{ __('Select') }}</option>
+                                                <option>{{ __('Select natural client') }}</option>
                                                 @foreach($cliente as $cli)
-                                                <option  style="color: #050505;" value="{{ $cli->id }}" >{{ $cli->persona->nombre}} </option>
+                                                <option  style="color: #050505;" value="{{ $cli->id }}" >{{ $cli->persona->nombre}} {{ $cli->persona->apellido_paterno}}</option>
                                             @endforeach
                                          </select>
                                         </div>

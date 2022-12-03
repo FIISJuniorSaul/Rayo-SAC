@@ -194,7 +194,8 @@
   "Names":"Nombres",
   "DNI number":"Nº de DNI",
   "Natural customer details":"Detalles del cliente Natural",
-  "select client":"Seleccionar cliente"
+  "select client":"Seleccionar cliente",
+  "Select natural client":"Seleccionar cliente natural"
 
 
 }
