@@ -58,12 +58,15 @@ class ClienteNaturalController extends Controller
     public function update(Request $request, $id)
     {
         try {
+            $persona = Persona::findOrfail($id);
+            $persona->fill($request->all());
+            $persona->save();
             $clientesn = ClienteNatural::findOrfail($id);
             $clientesn->fill($request->all());
             $clientesn->save();
-            return redirect()->route('clientes.indexClienteNatural')->with('success', 'El usuario ha sido actualizado correctamente.');
+            return redirect()->route('clienteNatural.index')->with('success', 'El usuario ha sido actualizado correctamente.');
         } catch (\Exception $ex) {
-            return back()->with('warning', 'ocurrio un error');
+            return back()->with('warning', 'ocurrio un error j');
         }
     }
     public function destroy($id)
@@ -72,6 +75,6 @@ class ClienteNaturalController extends Controller
         $persona = Persona::findOrFail($id);
         $clientesn->delete();
         $persona->delete();
-        return redirect()->route('clientes.indexClienteNatural')->with('success', 'El usuario ha sido eliminado correctamente.');
+        return redirect()->route('clienteNatural.index')->with('success', 'El usuario ha sido eliminado correctamente.');
     }
 }

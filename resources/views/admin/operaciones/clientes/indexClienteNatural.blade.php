@@ -62,8 +62,9 @@
                                         <td>{{$clienN->persona->nombre}}</td>
                                         <td>{{$clienN->persona->apellido_paterno}}</td>
                                         <td>{{$clienN->persona->apellido_materno}}</td>
-                                        <td>{{$clienN->persona->telefono}}</td>
                                         <td>{{$clienN->persona->correo}}</td>
+                                        <td>{{$clienN->persona->telefono}}</td>
+
                                         <td>
                                             <form action="{{route('clienteNatural.destroy',$clienN->id)}}" method="POST">
                                                 <a class="btn btn-primary btn-sm lift" href="{{route('clienteNatural.edit',$clienN->id)}}"><em class='bx bxs-edit-alt'></em></a>
