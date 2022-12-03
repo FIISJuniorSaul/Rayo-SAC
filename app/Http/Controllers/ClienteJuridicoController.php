@@ -50,9 +50,10 @@ class ClienteJuridicoController extends Controller
             $juridico->distrito = $request->distrito;
             $juridico->save();
             DB::commit();
-            return redirect()->route('clienteJuridico.index')->with('success', 'El usuario ha sido creado correctamente.');
+            return redirect()->route('clienteJuridico.index')->with('success', 'El cliente juridico ha sido creado correctamente.');
         } catch (\Exception $e) {
             DB::rollBack();
+            return back()->with('warning', 'ocurrio un error');
         }
     }
     public function edit($id)

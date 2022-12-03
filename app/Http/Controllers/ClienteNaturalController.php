@@ -40,7 +40,7 @@ class ClienteNaturalController extends Controller
             $natural->codigo = $request->codigo;
             $natural->save();
             DB::commit();
-            return redirect()->route('clienteNatural.index')->with('success', 'El usuario ha sido creado correctamente.');
+            return redirect()->route('clienteNatural.index')->with('success', 'El cliente natural ha sido creado correctamente.');
         } catch (\Exception $e) {
             DB::rollBack();
         }
@@ -64,7 +64,7 @@ class ClienteNaturalController extends Controller
             $clientesn = ClienteNatural::findOrfail($id);
             $clientesn->fill($request->all());
             $clientesn->save();
-            return redirect()->route('clienteNatural.index')->with('success', 'El usuario ha sido actualizado correctamente.');
+            return redirect()->route('clienteNatural.index')->with('success', 'El cliente natural ha sido actualizado correctamente.');
         } catch (\Exception $ex) {
             return back()->with('warning', 'ocurrio un error j');
         }
@@ -75,6 +75,6 @@ class ClienteNaturalController extends Controller
         $persona = Persona::findOrFail($id);
         $clientesn->delete();
         $persona->delete();
-        return redirect()->route('clienteNatural.index')->with('success', 'El usuario ha sido eliminado correctamente.');
+        return redirect()->route('clienteNatural.index')->with('success', 'El cliente natural ha sido eliminado correctamente.');
     }
 }
